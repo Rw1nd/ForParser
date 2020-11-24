@@ -7,8 +7,7 @@
 #include "antlr4-runtime.h"
 #include "CforVisitor.h"
 
-#include <iostream>
-using namespace std;
+
 /**
  * This class provides an empty implementation of CforVisitor, which can be
  * extended to create a visitor which only needs to handle a subset of the available methods.
@@ -113,9 +112,6 @@ public:
   }
 
   virtual antlrcpp::Any visitPrimaryExpression(CforParser::PrimaryExpressionContext *ctx) override {
-
-      antlrcpp::Any *node =  visit(ctx->Identifier());
-      cout << node->toString() << endl;
     return visitChildren(ctx);
   }
 

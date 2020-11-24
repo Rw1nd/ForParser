@@ -19,6 +19,7 @@ forExpression
 statement
     :   compoundStatement
     |   expressionStatement
+    |   forStatement
     ;
 
 compoundStatement
