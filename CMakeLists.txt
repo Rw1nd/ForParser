@@ -14,6 +14,7 @@ link_directories(${PROJECT_SOURCE_DIR}/../antlr4-cpp-runtime-4.8-macos/lib)
 
 add_executable(ForParser
         main.cpp
+        ForVisitor.cpp
         ${PARSERDIR}
         )
 

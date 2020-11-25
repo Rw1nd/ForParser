@@ -3,10 +3,8 @@
 #include "antlr4-common.h"
 #include "CforLexer.h"
 #include "CforParser.h"
-#include "CforVisitor.h"
-#include "CforListener.h"
-#include "CforBaseVisitor.h"
-#include <iostream>
+#include "ForVisitor.h"
+#include "type.h"
 
 using namespace antlr4;
 using namespace std;
@@ -22,10 +20,9 @@ int main(int argc, const char* argv[]) {
     CforParser parser(&tokens);
 
     tree::ParseTree *tree = parser.forStatement();
-    CforBaseVisitor visitortest;
+    ForVisitor visitortest;
 
-    tree->accept(&visitortest);
-
+    visitortest.visit(tree);
 
     return 0;
 }
