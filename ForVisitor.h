@@ -65,6 +65,9 @@ public:
      antlrcpp::Any visitAssignmentOperator(CforParser::AssignmentOperatorContext *context);
 
      antlrcpp::Any visitUnaryOperator(CforParser::UnaryOperatorContext *context);
+
+protected:
+    int layer = 0;
 };
 
 

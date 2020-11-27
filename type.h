@@ -7,8 +7,11 @@
 
 #include <string>
 #include <iostream>
+#include <map>
 
 using namespace std;
+
+enum TypeToken{Type_INT,};
 
 class Type{
 public:
@@ -24,11 +27,30 @@ protected:
 
 class Symbol{
 public:
+    Symbol(string _name){
+        name = _name;
+    }
     string getname() { return name; }
     shared_ptr<Type> gettype() { return type; }
 protected:
     string name;
     shared_ptr<Type> type;
+};
+
+class ForInfo{
+public:
+
+    ForInfo(string _id){
+        id = _id;
+    }
+    string getid() { return id; }
+    int getstart() { return start; }
+    int getend() { return end; }
+
+protected:
+    string id;
+    int start;
+    int end;
 };
 
 
